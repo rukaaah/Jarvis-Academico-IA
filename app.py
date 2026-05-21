@@ -19,6 +19,8 @@ if "monitor_iniciado" not in st.session_state:
     atexit.register(observer.stop)
 API_URL = os.getenv("API_URL")
 API_KEY = os.getenv("API_KEY")
+API_URL = st.secrets.get("API_URL")
+API_KEY = st.secrets["API_KEY"]
 client = OpenAI(base_url=API_URL, api_key=API_KEY)
 
 st.set_page_config(page_title="JARVIS Acadêmico", layout="wide")
