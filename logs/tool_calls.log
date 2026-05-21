@@ -93,3 +93,10 @@ Traceback (most recent call last):
   File "/Users/pl/Desktop/Ufms/IA/venv/lib/python3.12/site-packages/watchdog/observers/fsevents.py", line 307, in run
     _fsevents.add_watch(self, self.watch, self.events_callback, self.pathnames)
 RuntimeError: Cannot add watch <ObservedWatch: path='data', is_recursive=False> - it is already scheduled
+2026-05-21 13:25:54,873 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 13:26:11,884 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 13:33:37,450 - Unhandled exception in FSEventsEmitter
+Traceback (most recent call last):
+  File "/Users/pl/Desktop/Ufms/IA/venv/lib/python3.12/site-packages/watchdog/observers/fsevents.py", line 307, in run
+    _fsevents.add_watch(self, self.watch, self.events_callback, self.pathnames)
+RuntimeError: Cannot add watch <ObservedWatch: path='data', is_recursive=False> - it is already scheduled

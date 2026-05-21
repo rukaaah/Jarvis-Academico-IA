@@ -1,7 +1,6 @@
 streamlit
 openai
-sentence-transformers
 chromadb
 pypdf
-easyocr
-torch
+fastembed
+watchdog
