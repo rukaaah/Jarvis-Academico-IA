@@ -1,0 +1,95 @@
+2026-05-21 12:18:04,796 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 400 Bad Request"
+2026-05-21 12:24:08,831 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:24:18,762 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:24:18,768 - TOOL: consultar_agenda | INPUT: {"periodo": "hoje"} | OUTPUT: [('Aula de IA', '2026-05-21T10:00:00', 'aula')]
+2026-05-21 12:24:19,581 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:25:36,388 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:25:36,393 - TOOL: listar_tarefas | INPUT: {} | OUTPUT: [(1, 'Revisar regressão logística', 'pendente'), (2, 'Preparar apresentação RAG', 'pendente')]
+2026-05-21 12:25:37,296 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:26:10,171 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:26:10,186 - TOOL: adicionar_tarefa | INPUT: {"descricao": "integrar ocr no sistema"} | OUTPUT: Tarefa 'integrar ocr no sistema' adicionada.
+2026-05-21 12:26:11,810 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:26:19,285 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:26:19,287 - TOOL: listar_tarefas | INPUT: {} | OUTPUT: [(1, 'Revisar regressão logística', 'pendente'), (2, 'Preparar apresentação RAG', 'pendente'), (3, 'integrar ocr no sistema', 'pendente')]
+2026-05-21 12:26:20,616 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:26:42,734 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:27:36,185 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:28:15,556 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:28:16,309 - TOOL: buscar_material_rag | INPUT: {"pergunta": "revisar regress\u00e3o log\u00edstica, preparar apresenta\u00e7\u00e3o RAG, integrar OCR no sistema"} | OUTPUT: [' duplas ou trios para construir um \nmodelo que consegue separar sim e não\nUm simples exemplo de \naprendizado (árvore de decisão)\n\nAprendizado Tradicional\nExtração de \nCaracterísticas Indutor 
+2026-05-21 12:28:21,754 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:29:01,159 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:37:02,656 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:37:03,289 - TOOL: buscar_material_rag | INPUT: {"pergunta": "texto de consulta aula_knn"} | OUTPUT: ['hecimentos básicos de LLMs\n● Aplicações diversas\n\n', ' duplas ou trios para construir um \nmodelo que consegue separar sim e não\nUm simples exemplo de \naprendizado (árvore de decisão)\n\nAprend
+2026-05-21 12:37:09,312 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:38:56,666 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:38:57,340 - TOOL: buscar_material_rag | INPUT: {"pergunta": "chunks do arquivo aula_knn"} | OUTPUT: ['ento de diversos outros \nalgoritmos na década de 90\n● Statistical Learning Theory:\n− Support Vector Machines (Vapnik 1995)\n− Naive Bayes\n● Boosting (Y Freund, RE Schapire 1997)\n● Livro: Machin
+2026-05-21 12:38:59,101 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:47:34,121 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:47:47,709 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:48:43,107 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:48:43,146 - TOOL: buscar_material_rag | INPUT: {"pergunta": "quem \u00e9 suellen cristina?"} | OUTPUT: [' 4 5 6 7 8 9 10\n1\n2\n3\n4\n5\n6\n7\n8\n9\n\n6\nK-Vizinhos mais Próximos\nInicialmente, os \nexemplos de \ntreinamento são \narmazenados.\nQuando uma novo \nexemplo precisa \nser classificado...\n1
+2026-05-21 12:48:44,901 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:49:17,208 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:50:28,680 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:50:28,729 - TOOL: buscar_material_rag | INPUT: {"pergunta": "Conte\u00fado do documento impor.pdf"} | OUTPUT: ['umas observações:\n\uf06e Portanto, o grau de explicação desses \nmétodo pode ser considerada inferior \nao dos métodos simbólicos;\n\uf06e O k-vizinhos mais próximos considera \ntodos os atributos 
+2026-05-21 12:50:35,132 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:52:52,677 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:53:04,224 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:53:23,067 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:54:12,525 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:56:47,969 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:56:48,016 - TOOL: buscar_material_rag | INPUT: {"pergunta": "Pyke"} | OUTPUT: ['o pyke é um boneco de aguas de sentina que é especialista em peixes', ' r i a s  -  V e n d e d o r a\n', 'jeto ia”                    não-spam \nD4: “filtro spam”                  não-spam\nNovo ex
+2026-05-21 12:56:49,094 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:56:58,515 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:57:22,784 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:57:33,126 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:57:45,312 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:58:00,057 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:58:31,494 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:58:51,666 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:59:03,442 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 12:59:03,480 - TOOL: buscar_material_rag | INPUT: {"pergunta": "quem \u00e9 darius"} | OUTPUT: ['darius é massa', 'o volks +\nNovo azul antigo gm ?\n24\nK-Vizinhos mais Próximos: \nAtributos Discretos\nUma forma simples de solucionar \nesse problema é utilizar a medida \noverlap. Nessa medida, 
+2026-05-21 12:59:04,364 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 13:00:59,768 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 13:00:59,818 - TOOL: buscar_material_rag | INPUT: {"pergunta": "funcionamento powerbank 65w 20000mah"} | OUTPUT: ['o powerbank 65w e 20000mah tem um otimo funcionamento com o switch2', 'jeto ia”                    não-spam \nD4: “filtro spam”                  não-spam\nNovo exemplo: “projeto filtro”\npalavra doc
+2026-05-21 13:01:01,202 - HTTP Request: POST https://llm.liaufms.org/v1/gemma-3-12b-it/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 13:03:10,783 - Unhandled exception in FSEventsEmitter
+Traceback (most recent call last):
+  File "/Users/pl/Desktop/Ufms/IA/venv/lib/python3.12/site-packages/watchdog/observers/fsevents.py", line 307, in run
+    _fsevents.add_watch(self, self.watch, self.events_callback, self.pathnames)
+RuntimeError: Cannot add watch <ObservedWatch: path='data', is_recursive=False> - it is already scheduled
+2026-05-21 13:06:03,755 - Unhandled exception in FSEventsEmitter
+Traceback (most recent call last):
+  File "/Users/pl/Desktop/Ufms/IA/venv/lib/python3.12/site-packages/watchdog/observers/fsevents.py", line 307, in run
+    _fsevents.add_watch(self, self.watch, self.events_callback, self.pathnames)
+RuntimeError: Cannot add watch <ObservedWatch: path='data', is_recursive=False> - it is already scheduled
+2026-05-21 13:07:59,578 - Unhandled exception in FSEventsEmitter
+Traceback (most recent call last):
+  File "/Users/pl/Desktop/Ufms/IA/venv/lib/python3.12/site-packages/watchdog/observers/fsevents.py", line 307, in run
+    _fsevents.add_watch(self, self.watch, self.events_callback, self.pathnames)
+RuntimeError: Cannot add watch <ObservedWatch: path='data', is_recursive=False> - it is already scheduled
+2026-05-21 13:08:12,742 - Unhandled exception in FSEventsEmitter
+Traceback (most recent call last):
+  File "/Users/pl/Desktop/Ufms/IA/venv/lib/python3.12/site-packages/watchdog/observers/fsevents.py", line 307, in run
+    _fsevents.add_watch(self, self.watch, self.events_callback, self.pathnames)
+RuntimeError: Cannot add watch <ObservedWatch: path='data', is_recursive=False> - it is already scheduled
+2026-05-21 13:08:32,161 - Unhandled exception in FSEventsEmitter
+Traceback (most recent call last):
+  File "/Users/pl/Desktop/Ufms/IA/venv/lib/python3.12/site-packages/watchdog/observers/fsevents.py", line 307, in run
+    _fsevents.add_watch(self, self.watch, self.events_callback, self.pathnames)
+RuntimeError: Cannot add watch <ObservedWatch: path='data', is_recursive=False> - it is already scheduled
+2026-05-21 13:11:03,760 - Unhandled exception in FSEventsEmitter
+Traceback (most recent call last):
+  File "/Users/pl/Desktop/Ufms/IA/venv/lib/python3.12/site-packages/watchdog/observers/fsevents.py", line 307, in run
+    _fsevents.add_watch(self, self.watch, self.events_callback, self.pathnames)
+RuntimeError: Cannot add watch <ObservedWatch: path='data', is_recursive=False> - it is already scheduled
+2026-05-21 13:11:33,686 - Unhandled exception in FSEventsEmitter
+Traceback (most recent call last):
+  File "/Users/pl/Desktop/Ufms/IA/venv/lib/python3.12/site-packages/watchdog/observers/fsevents.py", line 307, in run
+    _fsevents.add_watch(self, self.watch, self.events_callback, self.pathnames)
+RuntimeError: Cannot add watch <ObservedWatch: path='data', is_recursive=False> - it is already scheduled
+2026-05-21 13:15:37,541 - Unhandled exception in FSEventsEmitter
+Traceback (most recent call last):
+  File "/Users/pl/Desktop/Ufms/IA/venv/lib/python3.12/site-packages/watchdog/observers/fsevents.py", line 307, in run
+    _fsevents.add_watch(self, self.watch, self.events_callback, self.pathnames)
+RuntimeError: Cannot add watch <ObservedWatch: path='data', is_recursive=False> - it is already scheduled
