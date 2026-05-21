@@ -7,6 +7,9 @@ import re
 import os
 from file_monitor import iniciar_monitoramento
 import rag_engine
+from dotenv import load_dotenv
+
+load_dotenv()
 
 if "monitor_iniciado" not in st.session_state:
     observer = iniciar_monitoramento(rag_engine)
@@ -14,10 +17,8 @@ if "monitor_iniciado" not in st.session_state:
     # Para garantir que o monitor seja parado ao fechar o app (opcional)
     import atexit
     atexit.register(observer.stop)
-
-API_URL = 'https://llm.liaufms.org/v1/gemma-3-12b-it'
-API_KEY = 'Cxt2ftLF7d3mHS2JdiFqB-eSDAQeZvFATPXPs02lV9A'
-
+API_URL = os.getenv("API_URL")
+API_KEY = os.getenv("API_KEY")
 client = OpenAI(base_url=API_URL, api_key=API_KEY)
 
 st.set_page_config(page_title="JARVIS Acadêmico", layout="wide")
