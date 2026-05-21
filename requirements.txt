@@ -1,10 +1,7 @@
 streamlit
 openai
-chromadb==0.4.22
+chromadb
 pypdf
 fastembed
 watchdog
-protobuf>=3.20,<4.0
-opentelemetry-proto==1.12.0
-opentelemetry-exporter-otlp-proto-grpc==1.12.0
-numpy<2.0
+python-dotenv

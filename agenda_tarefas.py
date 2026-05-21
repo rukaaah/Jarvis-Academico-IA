@@ -44,7 +44,9 @@ def consultar_agenda(periodo="hoje"):
         c.execute("SELECT titulo, data_hora, tipo FROM agenda WHERE date(data_hora) = ?", (periodo,))
     rows = c.fetchall()
     conn.close()
-    return rows
+    if not rows:
+        return "Nenhum evento encontrado."
+    return "\n".join([f"{row[0]} - {row[1]} ({row[2]})" for row in rows])
 
 def listar_tarefas():
     conn = sqlite3.connect(DB_PATH)
@@ -69,5 +71,29 @@ def concluir_tarefa(id_tarefa):
     conn.commit()
     conn.close()
     return f"Tarefa {id_tarefa} concluída."
+
+def adicionar_evento_agenda(titulo: str, data_hora: str, tipo: str = "evento") -> str:
+    """
+    Adiciona um evento à agenda.
+    data_hora deve estar no formato ISO 'YYYY-MM-DDTHH:MM:SS' ou 'YYYY-MM-DD HH:MM:SS'.
+    tipo pode ser: aula, prova, evento.
+    """
+    try:
+        # Tenta converter para datetime para validar
+        if 'T' in data_hora:
+            dt = datetime.fromisoformat(data_hora)
+        else:
+            dt = datetime.strptime(data_hora, "%Y-%m-%d %H:%M:%S")
+        data_hora_iso = dt.isoformat()
+    except Exception as e:
+        return f"Erro no formato da data/hora: {e}. Use 'YYYY-MM-DDTHH:MM:SS' ou 'YYYY-MM-DD HH:MM:SS'."
+
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    c.execute("INSERT INTO agenda (titulo, data_hora, tipo) VALUES (?, ?, ?)",
+              (titulo, data_hora_iso, tipo))
+    conn.commit()
+    conn.close()
+    return f"Evento '{titulo}' adicionado na agenda para {data_hora}."
 
 init_db()

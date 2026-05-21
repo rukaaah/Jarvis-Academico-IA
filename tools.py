@@ -1,7 +1,7 @@
 import json
 import os
 import logging
-from agenda_tarefas import consultar_agenda, listar_tarefas, adicionar_tarefa, concluir_tarefa
+from agenda_tarefas import consultar_agenda, listar_tarefas, adicionar_tarefa, concluir_tarefa, adicionar_evento_agenda
 from rag_engine import buscar_material_rag
 
 # Cria diretório de logs se não existir
@@ -36,7 +36,14 @@ Você tem acesso a estas ferramentas:
 5. buscar_material_rag(pergunta)
    - pergunta: texto da consulta
    - Busca nos documentos de estudo (PDF, TXT) e retorna trechos relevantes.
+
+6. adicionar_evento_agenda(titulo, data_hora, tipo)
+   - titulo: string com o nome do evento
+   - data_hora: string no formato "YYYY-MM-DD HH:MM:SS" ou "YYYY-MM-DDTHH:MM:SS"
+   - tipo: "aula", "prova" ou "evento"
+   - Adiciona um evento à agenda acadêmica.
 """
+
 
 def log_tool_call(tool_name, inputs, outputs):
     """Registra a chamada da ferramenta no arquivo de log."""
@@ -61,6 +68,11 @@ def execute_tool_call(tool_name: str, arguments: dict):
     elif tool_name == "buscar_material_rag":
         pergunta = arguments.get("pergunta")
         result = buscar_material_rag(pergunta)
+    elif tool_name == "adicionar_evento_agenda":
+        titulo = arguments.get("titulo")
+        data_hora = arguments.get("data_hora")
+        tipo = arguments.get("tipo", "evento")
+        result = adicionar_evento_agenda(titulo, data_hora, tipo)
     else:
         result = f"Ferramenta desconhecida: {tool_name}"
     
