@@ -148,7 +148,7 @@ if st.session_state.exercicios:
                 st.session_state.erros = []
                 st.rerun()
 
-# ========== CHAT PRINCIPAL ==========
+# Chat
 prompt = st.chat_input("Digite sua pergunta...")
 if prompt:
     # Verifica se o usuário quer gerar exercícios (ex: "gerar exercícios sobre regressão logística")
@@ -167,7 +167,6 @@ if prompt:
                     st.session_state.erros = []
                     st.success(f"✅ Exercícios sobre '{topico}' gerados! Veja na área acima.")
                     st.rerun()
-        # Não adiciona ao histórico do agente (tratamento especial)
     else:
         # Processa normalmente com o agente
         st.session_state.messages.append({"role": "user", "content": prompt})
