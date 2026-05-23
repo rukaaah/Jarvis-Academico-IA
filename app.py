@@ -102,7 +102,6 @@ with st.sidebar.expander("Arquivos de Estudo", expanded=False):
                 st.rerun()
     else:
         st.info("Nenhum arquivo adicionado ainda.")
-s
 # Chat
 prompt = st.chat_input("Digite sua pergunta...")
 if prompt:
