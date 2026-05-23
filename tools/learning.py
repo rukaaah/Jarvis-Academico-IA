@@ -38,7 +38,6 @@ Apenas retorne o JSON, sem texto adicional."""
             # Adiciona o tópico a cada exercício para uso na recomendação
             for ex in data.get("exercicios", []):
                 ex["topico"] = topico
-            print(data)
             return data
         else:
             return {"erro": "Falha ao gerar exercícios (formato inválido)."}

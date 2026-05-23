@@ -102,52 +102,7 @@ with st.sidebar.expander("Arquivos de Estudo", expanded=False):
                 st.rerun()
     else:
         st.info("Nenhum arquivo adicionado ainda.")
-
-# ========== ÁREA DE EXERCÍCIOS (interativa) ==========
-if st.session_state.exercicios:
-    ex_list = st.session_state.exercicios
-    idx = st.session_state.exercicio_atual
-    if idx < len(ex_list):
-        ex = ex_list[idx]
-        st.markdown("---")
-        st.subheader(f"📝 Exercício {idx+1} de {len(ex_list)}")
-        st.markdown(f"**{ex['pergunta']}**")
-        opcao = st.radio("Alternativas:", ex["opcoes"], key=f"q_{idx}")
-        if st.button("Responder", key=f"btn_{idx}"):
-            if opcao == ex["resposta_correta"]:
-                st.session_state.pontuacao += 1
-                st.success("✅ Correta!")
-            else:
-                st.error(f"❌ Errada! A resposta certa é {ex['resposta_correta']}. {ex['explicacao']}")
-                st.session_state.erros.append(ex.get("topico", "tópico não identificado"))
-            st.session_state.exercicio_atual += 1
-            st.rerun()
-    else:
-        # Exercícios finalizados
-        st.markdown("---")
-        st.success(f"🎉 Você acertou {st.session_state.pontuacao} de {len(ex_list)}!")
-        col1, col2 = st.columns(2)
-        with col1:
-            if st.button("📚 Recomendar revisão"):
-                if st.session_state.erros:
-                    topicos = list(set(st.session_state.erros))
-                    recomendados = recomendar_revisao(topicos)
-                    if recomendados:
-                        st.write("Arquivos recomendados para revisão:")
-                        for arq in recomendados:
-                            st.write(f"- `{arq}`")
-                    else:
-                        st.info("Não encontrei materiais específicos para esses tópicos.")
-                else:
-                    st.info("Sem erros! Continue praticando.")
-        with col2:
-            if st.button("🔄 Gerar novos exercícios"):
-                st.session_state.exercicios = None
-                st.session_state.exercicio_atual = 0
-                st.session_state.pontuacao = 0
-                st.session_state.erros = []
-                st.rerun()
-
+s
 # Chat
 prompt = st.chat_input("Digite sua pergunta...")
 if prompt:
