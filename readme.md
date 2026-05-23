@@ -396,23 +396,6 @@ OUTPUT: ID: 1 | Estudar Python - pendente
 
 ---
 
-# 🎥 Demonstração
-
-## O vídeo apresenta:
-
-✅ Arquitetura do sistema  
-✅ Funcionamento do RAG  
-✅ Tool Calling em ação  
-✅ Agenda e tarefas via chat  
-✅ Geração de exercícios  
-✅ Logs e execução das ferramentas  
-
-```txt
-[Adicionar link do vídeo aqui]
-```
-
----
-
 # 👥 Autores
 
 | Nome                     | GitHub                                  |
