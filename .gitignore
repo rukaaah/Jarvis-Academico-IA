@@ -16,3 +16,4 @@ chroma_db/
 *.sqlite3
 .streamlit/config.toml
 .pytest_cache/
+.DS_Store
