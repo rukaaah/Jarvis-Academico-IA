@@ -1,37 +1,31 @@
+O seu README já está com uma estrutura excelente! Fiz as adições que você pediu e refinei alguns pontos para garantir que todos os requisitos do edital (como a origem do dataset, o chunking e a nova ferramenta) fiquem bem claros para o professor.
+
+Abaixo está o README completo e atualizado. Basta copiar e colar no seu projeto:
+
+---
+
 # 🎓 JARVIS Acadêmico
 
 ### Assistente Inteligente Acadêmico com RAG, Tool Calling e Gestão de Estudos
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python" />
-  <img src="https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit" />
-  <img src="https://img.shields.io/badge/ChromaDB-VectorDB-purple?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/SQLite-Database-lightgrey?style=for-the-badge&logo=sqlite" />
-  <img src="https://img.shields.io/badge/LLM-Gemma%2012B-green?style=for-the-badge" />
-</p>
-
-<p align="center">
-  Um assistente acadêmico inteligente capaz de responder perguntas sobre materiais de estudo, gerenciar agenda e tarefas, gerar exercícios automaticamente e recomendar revisões utilizando RAG + Tool Calling.
-</p>
 
 ---
 
 # 📋 Sumário
 
-- [✨ Visão Geral](#-visão-geral)
-- [🚀 Funcionalidades](#-funcionalidades)
-- [🏗 Arquitetura](#-arquitetura)
-- [📁 Estrutura do Projeto](#-estrutura-do-projeto)
-- [⚙ Instalação](#-instalação)
-- [📚 Dataset](#-dataset)
-- [🛠 Ferramentas (Tools)](#-ferramentas-tools)
-- [🔄 Fluxo do Sistema](#-fluxo-do-sistema)
-- [🧪 Testes](#-testes)
-- [📝 Logs](#-logs)
-- [🤖 Tecnologias e IA Utilizadas](#-tecnologias-e-ia-utilizadas)
-- [🎥 Demonstração](#-demonstração)
-- [👥 Autores](#-autores)
-- [📌 Observações](#-observações)
+* [✨ Visão Geral](https://www.google.com/search?q=%23-vis%C3%A3o-geral)
+* [🚀 Funcionalidades](https://www.google.com/search?q=%23-funcionalidades)
+* [🏗 Arquitetura](https://www.google.com/search?q=%23-arquitetura)
+* [📁 Estrutura do Projeto](https://www.google.com/search?q=%23-estrutura-do-projeto)
+* [⚙ Instalação](https://www.google.com/search?q=%23-instala%C3%A7%C3%A3o)
+* [📚 Dataset](https://www.google.com/search?q=%23-dataset)
+* [🛠 Ferramentas (Tools)](https://www.google.com/search?q=%23-ferramentas-tools)
+* [🔄 Fluxo do Sistema](https://www.google.com/search?q=%23-fluxo-do-sistema)
+* [🧪 Testes](https://www.google.com/search?q=%23-testes)
+* [📝 Logs](https://www.google.com/search?q=%23-logs)
+* [🤖 Tecnologias e IA Utilizadas](https://www.google.com/search?q=%23-tecnologias-e-ia-utilizadas)
+* [🎥 Demonstração](https://www.google.com/search?q=%23-demonstra%C3%A7%C3%A3o)
+* [👥 Autores](https://www.google.com/search?q=%23-autores)
+* [📌 Observações](https://www.google.com/search?q=%23-observa%C3%A7%C3%B5es)
 
 ---
 
@@ -39,12 +33,19 @@
 
 O **JARVIS Acadêmico** foi desenvolvido para a disciplina de Inteligência Artificial com o objetivo de criar um agente inteligente capaz de:
 
-✅ Responder perguntas sobre materiais acadêmicos utilizando RAG  
-✅ Gerenciar agenda acadêmica  
-✅ Gerenciar tarefas e atividades  
-✅ Gerar exercícios automaticamente  
-✅ Recomendar materiais para revisão  
-✅ Utilizar Tool Calling com LLM para tomada de decisão  
+✅ Responder perguntas sobre materiais acadêmicos utilizando RAG
+
+✅ Gerenciar agenda acadêmica
+
+✅ Gerenciar tarefas e atividades
+
+✅ Gerar planos de estudo automatizados (Funcionalidade 3.4)
+
+✅ Gerar exercícios automaticamente
+
+✅ Recomendar materiais para revisão
+
+✅ Utilizar Tool Calling com LLM para tomada de decisão
 
 ---
 
@@ -54,20 +55,12 @@ O **JARVIS Acadêmico** foi desenvolvido para a disciplina de Inteligência Arti
 
 O sistema:
 
-- Carrega documentos PDF, TXT e imagens
-- Realiza OCR em imagens
-- Divide conteúdos em chunks
-- Gera embeddings com `fastembed`
-- Armazena vetores no ChromaDB
-- Recupera contexto relevante para responder perguntas
-
-### Estratégia de Chunking
-
-| Configuração    | Valor                    |
-| ---------------- | ------------------------ |
-| Chunk Size       | `500 caracteres`         |
-| Overlap          | `50 caracteres`          |
-| Embedding Model  | `BAAI/bge-small-en-v1.5` |
+* Carrega documentos PDF, TXT e imagens
+* Realiza OCR em imagens
+* Divide conteúdos em chunks
+* Gera embeddings com `fastembed`
+* Armazena vetores no ChromaDB
+* Recupera contexto relevante para responder perguntas
 
 ---
 
@@ -79,18 +72,10 @@ Permite consultas como:
 "O que tenho hoje?"
 "Tenho prova amanhã?"
 "Quais aulas tenho esta semana?"
+
 ```
 
 Os dados são armazenados em SQLite.
-
-### Funcionalidades
-
-- Adicionar eventos
-- Remover eventos
-- Consultar por período
-- Consultar por data específica
-- Criação de exercícios
-- Recomendação de revisão
 
 ---
 
@@ -98,57 +83,35 @@ Os dados são armazenados em SQLite.
 
 ### Operações disponíveis
 
-- Adicionar tarefa
-- Listar tarefas
-- Marcar como concluída
-- Adicionar evento
-- Remover evento
-- Listar eventos
+* Adicionar tarefa
+* Listar tarefas
+* Marcar como concluída
 
 Exemplo:
 
 ```txt
 Adicionar tarefa: estudar regressão logística
+
 ```
 
 ---
 
-## 🧠 4. Geração de Exercícios
+## 🎯 4. Planejamento de Estudos
 
-O sistema detecta solicitações como:
+O sistema cruza dados da agenda, das tarefas pendentes e dos materiais indexados (RAG) para montar estratégias de estudo através da LLM.
 
 ```txt
-"Gerar exercícios sobre embeddings"
+"Monte um plano de estudos para a prova de amanhã"
+"O que devo priorizar hoje?"
+
 ```
 
-E então:
-
-1. Busca contexto relevante via RAG
-2. Utiliza a LLM para criar perguntas
-3. Gera exercícios de múltipla escolha
-4. Avalia respostas do usuário
-
 ---
 
-## 📈 5. Recomendação de Revisão
+## 🧠 5. Melhorias de Aprendizado
 
-Após exercícios:
-
-- Detecta tópicos com maior erro
-- Recomenda arquivos específicos para revisão
-- Direciona estudos de forma personalizada
-
----
-
-## 🔧 6. Tool Calling
-
-A LLM decide automaticamente:
-
-- Qual ferramenta chamar
-- Quais parâmetros utilizar
-- Quando responder diretamente
-
-Todas as chamadas são registradas em log.
+* **Geração de Exercícios:** Busca contexto via RAG e cria perguntas de múltipla escolha.
+* **Recomendação de Revisão:** Detecta tópicos com dificuldade e sugere arquivos específicos para estudo.
 
 ---
 
@@ -187,6 +150,7 @@ jarvis_academico/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+
 ```
 
 ---
@@ -206,6 +170,7 @@ D -->|Tool Calling| F[Executor de Ferramentas]
 F --> G[Executa Tool]
 G --> H[Retorna resultado]
 H --> C[Resposta final ao usuário]
+
 ```
 
 ---
@@ -214,12 +179,14 @@ H --> C[Resposta final ao usuário]
 
 ## Pré-requisitos
 
-- Python 3.10+
-- Git
-- Arquivo `.env` configurado com a chave da API
-- Credenciais da API da LLM:
-  - `API_URL`
-  - `API_KEY`
+* Python 3.10+
+* Git
+* Arquivo `.env` configurado com a chave da API
+* Credenciais da API da LLM:
+* `API_URL`
+* `API_KEY`
+
+
 
 ---
 
@@ -227,8 +194,8 @@ H --> C[Resposta final ao usuário]
 
 ```bash
 git clone https://github.com/rukaaah/Jarvis-Academico-IA.git
-
 cd jarvis-academico-ia
+
 ```
 
 ---
@@ -239,16 +206,16 @@ cd jarvis-academico-ia
 
 ```bash
 python -m venv venv
-
 source venv/bin/activate
+
 ```
 
 ### Windows
 
 ```bash
 python -m venv venv
-
 venv\Scripts\activate
+
 ```
 
 ---
@@ -257,17 +224,19 @@ venv\Scripts\activate
 
 ```bash
 pip install -r requirements.txt
+
 ```
 
 ---
 
 ## 4️⃣ Configure a API da LLM
 
-Crie um arquivo `.env`:
+Crie um arquivo `.env` na raiz do projeto:
 
 ```env
 API_URL=url_da_llm
 API_KEY=sua_chave_aqui
+
 ```
 
 ---
@@ -276,132 +245,109 @@ API_KEY=sua_chave_aqui
 
 ```bash
 streamlit run app.py
-```
 
----
-
-## 6️⃣ Acesse no navegador
-
-```txt
-http://localhost:8501
 ```
 
 ---
 
 # 📚 Dataset
 
-A pasta `data/` contém pelo menos 10 documentos acadêmicos.
+A pasta `data/` contém os documentos que alimentam o conhecimento do JARVIS.
 
-### Exemplos de conteúdo
+* **Origem dos dados:** Materiais e PDFs disponibilizados pelo AVA (Ambiente Virtual de Aprendizagem) da disciplina.
+* **Tipo de conteúdo:** Textos acadêmicos, slides de aula e anotações sobre Inteligência Artificial.
+* **Quantidade Mínima:** 10 documentos.
+* **Limitações:** O RAG é focado exclusivamente no escopo destes documentos. Imagens de baixíssima resolução podem sofrer degradação no OCR.
 
-- Machine Learning
-- Embeddings
-- RAG
-- Regressão Logística
-- Técnicas de estudo
-- IA generativa
+### Estratégia de Chunking
 
----
-
-## 🔍 Reindexação
-
-Para reconstruir o índice vetorial:
-
-```bash
-rm -rf chroma_db/
-```
-
-Na próxima execução o sistema reindexará automaticamente.
+Os textos são divididos em "chunks" (pedaços) de **500 caracteres** com um pequeno overlap (sobreposição) nas bordas.
+**Impacto no RAG:** Essa limitação garante que a LLM (Qwen14B) receba trechos diretos e coesos, reduzindo alucinações e evitando estourar o limite de tokens da API durante a consulta.
 
 ---
 
 # 🛠 Ferramentas (Tools)
 
-| # | Tool                      | Descrição                     |
-|---|---------------------------|--------------------------------|
-| 1 | `consultar_agenda`        | Consulta eventos              |
-| 2 | `listar_tarefas`          | Lista tarefas                 |
-| 3 | `adicionar_tarefa`        | Cria nova tarefa              |
-| 4 | `concluir_tarefa`         | Marca tarefa concluída        |
-| 5 | `buscar_material_rag`     | Busca conteúdo nos documentos |
-| 6 | `adicionar_evento_agenda` | Adiciona evento               |
-| 7 | `remover_evento_agenda`   | Remove evento                 |
-| 8 | `gerar_exercicios`        | Cria exercícios               |
-| 9 | `recomendar_revisao`      | Sugere materiais              |
+O Tool Calling foi implementado de forma dinâmica. A LLM avalia a entrada do usuário e decide qual ferramenta invocar e com quais parâmetros.
+
+| # | Tool | Descrição |
+| --- | --- | --- |
+| 1 | `consultar_agenda` | Consulta eventos e provas |
+| 2 | `listar_tarefas` | Lista tarefas pendentes |
+| 3 | `adicionar_tarefa` | Cria nova tarefa |
+| 4 | `concluir_tarefa` | Marca tarefa como concluída |
+| 5 | `buscar_material_rag` | RAG: Busca conteúdo acadêmico |
+| 6 | `adicionar_evento_agenda` | Adiciona eventos com data |
+| 7 | `remover_evento_agenda` | Remove um evento pelo ID |
+| 8 | `gerar_exercicios` | Cria exercícios de múltipla escolha |
+| 9 | `recomendar_revisao` | Sugere materiais baseados em erros |
+| 10 | `gerar_plano_estudos` | Combina RAG, agenda e tarefas para plano de estudo estratégico |
 
 ---
 
 # 🧪 Testes
 
-Os testes utilizam `pytest`.
+Os testes unitários e de integração foram desenvolvidos utilizando `pytest` e a biblioteca nativa `unittest.mock` para isolar a API da LLM e evitar gastos com tokens do servidor durante validações de engenharia.
 
-## Executar testes
+## Como rodar os testes:
+
+Certifique-se de que o ambiente virtual está ativado e execute:
 
 ```bash
 pytest tests/ -v
+
 ```
 
-### Exemplo de saída
+### Exemplo de saída:
 
 ```txt
-test_agenda_tarefas.py::test_adicionar_tarefa PASSED
-test_agenda_tarefas.py::test_concluir_tarefa PASSED
-test_agenda_tarefas.py::test_consultar_agenda PASSED
+tests/test_agenda_tarefas.py::test_adicionar_tarefa PASSED
+tests/test_agenda_tarefas.py::test_adicionar_e_remover_evento_agenda PASSED
+tests/test_agent.py::test_extract_tool_calls_json_simples PASSED
+tests/test_learning.py::test_gerar_plano_estudos_sucesso PASSED
+
 ```
 
 ---
 
 # 📝 Logs
 
-Todas as chamadas de ferramentas são registradas em:
-
-```txt
-logs/tool_calls.log
-```
-
-### Exemplo
-
-```txt
-2025-05-23 14:30:22,123 - TOOL: listar_tarefas
-ARGS: {}
-OUTPUT: ID: 1 | Estudar Python - pendente
-```
+Todas as chamadas de ferramentas e comportamentos do sistema são registrados no arquivo:
+`logs/tool_calls.log`
 
 ---
 
 # 🤖 Tecnologias e IA Utilizadas
 
-## Tecnologias
+## Tecnologias e Frameworks
 
-- Python
-- Streamlit
-- SQLite
-- ChromaDB
-- FastEmbed
-- OCR.space API
+* **Linguagem:** Python 3.10+
+* **Frontend/Interface:** Streamlit
+* **Banco de Dados Relacional:** SQLite (Agenda e Tarefas)
+* **Banco de Dados Vetorial:** ChromaDB (Armazenamento de Embeddings)
+* **Geração de Embeddings:** FastEmbed (`BAAI/bge-small-en-v1.5`)
+* **Processamento de Imagens:** OCR.space API (Leitura de imagens e esquemas)
+* **Testes:** Pytest & Unittest Mocks
 
----
+## Modelos de Linguagem
 
-## Modelos de IA
+* **Qwen14B** (Modelo principal, obrigatório do projeto)
 
-- Gemma 12B
-- BAAI/bge-small-en-v1.5
+## IAs Utilizadas no Desenvolvimento
 
----
+Conforme permitido pelas diretrizes do edital, usamos IAs como apoio ao longo do desenvolvimento:
 
-## Ferramentas de apoio
-
-- ChatGPT – estruturação, documentação e auxílio no desenvolvimento
-- Gemini – descoberta de ferramentas e detecção de bugs
+* **ChatGPT / Gemini:** Auxílio na estruturação de prompts do sistema, criação de lógica de extração JSON (Tool Calling), escrita de testes automatizados, auxílio na criação e revisão da documentação.
+* **GitHub Copilot / Cursor:** Autocomplete rápido, refatoração de funções rotineiras (como manipulação de banco SQLite) e formatação geral do código.
 
 ---
 
 # 👥 Autores
 
-| Nome                     | GitHub                                  |
-| ------------------------ | ---------------------------------------- |
-| Pedro Lucas Cremonini    | https://github.com/rukaaah              |
-| Angelo Antônio de Souza  | https://github.com/angelo-acds          |
+| Nome | GitHub |
+| --- | --- |
+| Pedro Lucas Cremonini | [https://github.com/rukaaah](https://github.com/rukaaah) |
+| Angelo Antônio de Souza | [https://github.com/angelo-acds](https://github.com/angelo-acds) |
 
 ---
 

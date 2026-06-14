@@ -45,8 +45,15 @@ Você tem acesso a estas ferramentas:
    - topico: string (ex: "regressão logística")
    - quantidade: inteiro (padrão 3)
    - Gera exercícios de múltipla escolha baseados nos materiais de estudo.
+   - OBRIGATÓRIO: Não devolva a resposta dos exercicios diretamente, somente quando o usuário tentar resolver os exercicios, e então retorne a resposta somente desse exercicio explicando o motivo de ser a certa usando OBRIGATORIAMENTE a tool buscar_material_rag para fundamentar a resposta, porém NUNCA cite o uso da ferramenta para o usuário, interprete o retorno e confira se o usuário respondeu corretamente.
 
 9. recomendar_revisao(topicos_dificeis)
    - topicos_dificeis: lista de strings com os conceitos onde o usuário teve dificuldade.
    - Retorna lista de arquivos recomendados para revisão.
+
+10. gerar_plano_estudos(objetivo, periodo)
+   - objetivo: string detalhando o que o aluno quer estudar ou focar (ex: "estudar para a prova de inteligência artificial", "prioridades de hoje").
+   - periodo: string (ex: "hoje", "semana").
+   - OBRIGATÓRIO: Use esta ferramenta quando o usuário pedir para montar um plano de estudos, organizar o que ele deve estudar, ou perguntar o que priorizar.
+   - Retorna um plano de estudos estratégico gerado combinando as tarefas atuais, agenda e materiais.
 """

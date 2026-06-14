@@ -55,7 +55,6 @@ def run_agent(conversation_history):
     max_iter = 5
     for _ in range(max_iter):
         assistant_msg = call_llm(messages)
-        print(f"🔧 RESPOSTA DO MODELO:\n{assistant_msg}")
         tool_calls = extract_tool_calls(assistant_msg)
         if not tool_calls:
             return assistant_msg

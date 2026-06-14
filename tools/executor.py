@@ -2,7 +2,7 @@ import os
 import logging
 from .agenda import consultar_agenda, listar_tarefas, adicionar_tarefa, concluir_tarefa, adicionar_evento_agenda, remover_evento_agenda
 from .rag_tool import buscar_material_rag
-from .learning import gerar_exercicios, recomendar_revisao
+from .learning import gerar_exercicios, recomendar_revisao, gerar_plano_estudos
 import logging
 
 os.makedirs('logs', exist_ok=True)
@@ -48,5 +48,9 @@ def execute_tool_call(tool_name: str, arguments: dict):
         topicos = arguments.get("topicos_dificeis", [])
         result = recomendar_revisao(topicos)
         return result
+    elif tool_name == "gerar_plano_estudos":
+        objetivo = arguments.get("objetivo", "organizar os estudos gerais")
+        periodo = arguments.get("periodo", "semana")
+        return gerar_plano_estudos(objetivo, periodo)
     else:
         return f"Ferramenta desconhecida: {tool_name}"

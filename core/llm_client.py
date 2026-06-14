@@ -11,7 +11,7 @@ client = OpenAI(base_url=API_URL, api_key=API_KEY)
 
 def call_llm(messages, temperature=0.3):
     response = client.chat.completions.create(
-        model='google/gemma-3-12b-it',
+        model='Qwen/Qwen2.5-14B-Instruct-AWQ',
         messages=messages,
         temperature=temperature
     )

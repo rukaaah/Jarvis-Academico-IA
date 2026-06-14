@@ -46,3 +46,19 @@ def test_consultar_agenda():
     eventos = agenda.consultar_agenda("2025-12-31")
     assert len(eventos) == 1
     assert eventos[0][1] == "Aula de IA"
+
+def test_adicionar_e_remover_evento_agenda():
+    # Adicionamos o :00 no final da string de data/hora
+    resultado_add = agenda.adicionar_evento_agenda("Prova de IA", "2026-06-20 14:00:00", "prova")
+    assert "adicionado" in resultado_add
+    
+    eventos = agenda.consultar_agenda("2026-06-20")
+    assert len(eventos) == 1
+    assert eventos[0][1] == "Prova de IA"
+    
+    id_evento = eventos[0][0]
+    resultado_rem = agenda.remover_evento_agenda(id_evento)
+    assert f"removido da agenda" in resultado_rem
+    
+    eventos_depois = agenda.consultar_agenda("2026-06-20")
+    assert len(eventos_depois) == 0
