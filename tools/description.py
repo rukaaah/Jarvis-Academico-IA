@@ -51,9 +51,11 @@ Você tem acesso a estas ferramentas:
    - topicos_dificeis: lista de strings com os conceitos onde o usuário teve dificuldade.
    - Retorna lista de arquivos recomendados para revisão.
 
-10. gerar_plano_estudos(objetivo, periodo)
+10. gerar_plano_estudos(objetivo, periodo, dia)
    - objetivo: string detalhando o que o aluno quer estudar ou focar (ex: "estudar para a prova de inteligência artificial", "prioridades de hoje").
    - periodo: string (ex: "hoje", "semana").
+   - dia: string no formato "YYYY-MM-DD" (ex: "2025-05-21") que representa o dia que o plano de estudos tem foco em finalizar.
    - OBRIGATÓRIO: Use esta ferramenta quando o usuário pedir para montar um plano de estudos, organizar o que ele deve estudar, ou perguntar o que priorizar.
    - Retorna um plano de estudos estratégico gerado combinando as tarefas atuais, agenda e materiais.
+   - Sempre informe o plano de estudos em linguagem natural, não retorne o plano em JSON, use a ferramenta somente para gerar o plano internamente e depois explique ele sempre para o usuário
 """

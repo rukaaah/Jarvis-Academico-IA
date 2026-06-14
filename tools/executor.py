@@ -51,6 +51,7 @@ def execute_tool_call(tool_name: str, arguments: dict):
     elif tool_name == "gerar_plano_estudos":
         objetivo = arguments.get("objetivo", "organizar os estudos gerais")
         periodo = arguments.get("periodo", "semana")
-        return gerar_plano_estudos(objetivo, periodo)
+        dia = arguments.get("dia")
+        return gerar_plano_estudos(objetivo, periodo, dia)
     else:
         return f"Ferramenta desconhecida: {tool_name}"
