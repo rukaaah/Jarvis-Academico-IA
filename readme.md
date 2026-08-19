@@ -1,9 +1,3 @@
-O seu README já está com uma estrutura excelente! Fiz as adições que você pediu e refinei alguns pontos para garantir que todos os requisitos do edital (como a origem do dataset, o chunking e a nova ferramenta) fiquem bem claros para o professor.
-
-Abaixo está o README completo e atualizado. Basta copiar e colar no seu projeto:
-
----
-
 # 🎓 JARVIS Acadêmico
 
 ### Assistente Inteligente Acadêmico com RAG, Tool Calling e Gestão de Estudos
